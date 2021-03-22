@@ -1,8 +1,8 @@
-# The Rust Programming Language
+# ภาษาโปรแกรมมิ่ง Rust
 
 [The Rust Programming Language](title-page.md)
 [Foreword](foreword.md)
-[Introduction](ch00-00-introduction.md)
+[บทนำ](ch00-00-introduction.md)
 
 ## Getting started
 
@@ -125,11 +125,11 @@
     - [Turning Our Single-Threaded Server into a Multithreaded Server](ch20-02-multithreaded.md)
     - [Graceful Shutdown and Cleanup](ch20-03-graceful-shutdown-and-cleanup.md)
 
-- [Appendix](appendix-00.md)
+- [ภาคผนวก](appendix-00.md)
     - [A - Keywords](appendix-01-keywords.md)
     - [B - Operators and Symbols](appendix-02-operators.md)
     - [C - Derivable Traits](appendix-03-derivable-traits.md)
     - [D - Useful Development Tools](appendix-04-useful-development-tools.md)
     - [E - Editions](appendix-05-editions.md)
-    - [F - Translations of the Book](appendix-06-translation.md)
+    - [F - การแปลหนังสือเล่มนี้](appendix-06-translation.md)
     - [G - How Rust is Made and “Nightly Rust”](appendix-07-nightly-rust.md)

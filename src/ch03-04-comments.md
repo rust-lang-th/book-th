@@ -1,27 +1,24 @@
-## Comments
+## คอมเม้นต์ (Comments)
 
-All programmers strive to make their code easy to understand, but sometimes
-extra explanation is warranted. In these cases, programmers leave notes, or
-*comments*, in their source code that the compiler will ignore but people
-reading the source code may find useful.
+โปรแกรมเมอร์ทุกคนมักจะพยายามทำให้โค้ดของตัวเองเข้าใจง่าย แต่ว่าบางครั้งการอธิบายโค้ดเพิ่มเติมก็ทำให้สามารถเข้าใจได้ง่ายมากขึ้น ซึ่งในกรณีนี้ การเขียนโน๊ต หรือ *คอมเม้นต์* ในซอร์สโค้ด ซึ่งคอมไพล์เลอร์จะไม่นำส่วนนี้มาใช้ แต่ว่าจะเป็นประโยชน์กับคนที่มาอ่านโค้ดนี้
 
-Here’s a simple comment:
+นี่คือตัวอย่างของการคอมเม้นต์:
 
 ```rust
 // hello, world
 ```
 
-In Rust, the idiomatic comment style starts a comment with two slashes, and the
-comment continues until the end of the line. For comments that extend beyond a
-single line, you’ll need to include `//` on each line, like this:
+ในภาษา Rust, การคอมเม้นต์สามารถทำได้โดยการเขียนเครื่องหมายทับไว้สองอัน
+และส่วนต่อมาในบรรทัดนั้นก็จะกลายเป็นส่วนของคอมเม้นต์ทันที โดยสำหรับการคอมเม้นต์มากกว่า 1 บรรทัด
+คุณจะต้องใส่ `//` ในทุกบรรทัดที่จะคอมเม้นต์ แบบนี้:
 
 ```rust
-// So we’re doing something complicated here, long enough that we need
-// multiple lines of comments to do it! Whew! Hopefully, this comment will
-// explain what’s going on.
+// เรากำลังทำบางอย่างที่ซับซ้อนที่นี่, เขียนได้ยาววววววววเท่าที่เราต้องการรรรรรรรร
+// เขียนหลายบรรทัดก็ได้! ว้าว! ยอดไปเลย, คอมเม้นต์นี้จะบอว่า
+// เกิดอะไรขึ้นบ้าง
 ```
 
-Comments can also be placed at the end of lines containing code:
+คอมเม้นต์สามารถเขียนไว้ที่ท้ายบรรทัดของโค้ดก็ได้:
 
 <span class="filename">Filename: src/main.rs</span>
 
@@ -29,8 +26,7 @@ Comments can also be placed at the end of lines containing code:
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-24-comments-end-of-line/src/main.rs}}
 ```
 
-But you’ll more often see them used in this format, with the comment on a
-separate line above the code it’s annotating:
+แต่ว่าคุณจะเห็นการใช้คอมเม้นแบบคนละบรรทัดมากกว่า:
 
 <span class="filename">Filename: src/main.rs</span>
 
@@ -38,5 +34,5 @@ separate line above the code it’s annotating:
 {{#rustdoc_include ../listings/ch03-common-programming-concepts/no-listing-25-comments-above-line/src/main.rs}}
 ```
 
-Rust also has another kind of comment, documentation comments, which we’ll
-discuss in the “Publishing a Crate to Crates.io” section of Chapter 14.
+Rust ยังมีคอมเม้นต์ชนิดอื่นอีกด้วยเช่น คอมเม้นแบบคู่มือ (documentation comments) 
+ซึ่งจะอธิบายเพิ่มเติมในส่วนของ “การเผยแพร่ Crate บน Crates.io” ในบทที่ 14.
