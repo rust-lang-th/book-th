@@ -34,7 +34,11 @@ For the commit message, use the following format:
 - `fix` :: Fix typo in the translation
 - `refined` :: Refined the word which already in Thai to be smoother to read but didn't change any meaning of it
 - `format` :: Formatting texts or page
-- `update` :: Update the detail of the page. This can happen when [the official repo](https://github.com/rust-lang/book) has change the detail in that page.
+- `add` :: Add new page<sup>1</sup>
+- `update` :: Update the detail of the page<sup>2</sup>
+
+<sup>1</sup> This can happen when [the official repo](https://github.com/rust-lang/book) add new page <br>
+<sup>2</sup> This can happen when [the official repo](https://github.com/rust-lang/book) has change the detail in the page
 
 #### Chapter
 Use the page type (chapter, appendix, forward, etc.) following the number of that kind of page. If there's no number specific for that kind of page, just use page type.
@@ -44,17 +48,9 @@ Example
 - For _appendix-04-useful-development-tools.md_ use `appendix-04`
 - For _title-page.md_ use `title-page.md`
 
-#### Line number
-- If the change is only a single line, use format `<line_number>`
-- If the change contains lines, use format as `<line_number_from>-<line_number_to>` (Note: There's a dash between these two line numbers)
-
-Example
-- For line number 5 use `5`
-- For line number 5 to 27 use `5-27`
-
 #### Subject (optional)
 is a short description of what has been done
 
 Example
-- For _change_ chapter _appendix-01-keywords.md_ line number _5_ use `change::appendix-01::5`
-- For _translate_ chapter _ch08-02-strings.md_ line number _19 to 42_ use `translate::ch08-02::19-42`
+- For _change_ chapter _appendix-01-keywords.md_ use `change::appendix-01`
+- For _translate_ chapter _ch08-02-strings.md_ use `translate::ch08-02`
