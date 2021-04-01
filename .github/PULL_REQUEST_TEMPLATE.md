@@ -8,4 +8,4 @@
 - [ ] The PR has short description about what you has been done
 
 Change detail:
-<!-- Optional Please add the description here -->
+<!-- Please add the PR description here -->
