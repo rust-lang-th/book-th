@@ -1,42 +1,56 @@
 # Contributing
 
-We'd love your help! Thanks for caring about the book.
+Welcome to Rustlang book Thai translation project. Contributions to the project are always very welcome! 🙏🏽  
 
 ## Licensing
 
-This repository is under the same license as Rust itself, MIT/Apache2. You
-can find the full text of each license in the `LICENSE-*` files in this
-repository.
+This repository is under the same license as the official book and Rust itself, MIT/Apache2. You can find the full text of each license in the `LICENSE-*` files in this repository.
 
 ## Code of Conduct
 
 The Rust project has [a code of conduct](http://rust-lang.org/policies/code-of-conduct)
 that governs all sub-projects, including this one. Please respect it!
 
-## Review
+## Guideline
+Have any questions? Feel free to ask in [our discussions](https://github.com/rust-lang-th/book-th/discussions) place. We're here to help!
 
-Our [open pull requests][pulls] are new chapters or edits that we're
-currently working on. We would love if you would read through those and make
-comments for any suggestions or corrections!
+## Translation
+1. Please translate one chapter at a time from top to bottom. Jumping the translation between the context in the same chapter will make the other translator lose the context in the original language around the part that not translate yet.
+3. When do the translation, please change only the texts and keep the style as same as the original version.
+4. Keep transliteration words low, but if you think Thai word to describe that English word is not clear as the original one, you can decide to keep it untouched.
+5. When in doubt, use the existing translation as the guideline.
 
-[pulls]: https://github.com/rust-lang/book/pulls
+## Submitting a pull request
+One PR should contain only one chapter so the reviewer can focus only on that chapter also this will keep PR in a reasonable size to review.
 
-## Help wanted
+### Commit message
+For the commit message, use the following format:
 
-If you're looking for ways to help that don't involve large amounts of
-reading or writing, check out the [open issues with the E-help-wanted
-label][help-wanted]. These might be small fixes to the text, Rust code,
-frontend code, or shell scripts that would help us be more efficient or
-enhance the book in some way!
+```<type>::<chapter>::<line_number>::<subject(optional)>```
 
-[help-wanted]: https://github.com/rust-lang/book/issues?q=is%3Aopen+is%3Aissue+label%3AE-help-wanted
+#### Types are
+- `translate` :: Translate from the original language to Thai
+- `change` :: Change incorrect translation which mean the meaning of the translation is going to change
+- `fix` :: Fix typo in the translation
+- `refined` :: Refined the word which already in Thai to be smoother to read but didn't change any meaning of it
+- `format` :: Formatting texts or page
+- `add` :: Add new page<sup>1</sup>
+- `update` :: Update the detail of the page<sup>2</sup>
 
-## Translations
+<sup>1</sup> This can happen when [the official repo](https://github.com/rust-lang/book) add new page <br>
+<sup>2</sup> This can happen when [the official repo](https://github.com/rust-lang/book) has change the detail in the page
 
-We'd love help translating the book! See the [Translations] label to join in
-efforts that are currently in progress. Open a new issue to start working on
-a new language! We're waiting on [mdbook support] for multiple languages
-before we merge any in, but feel free to start!
+#### Chapter
+Use the page type (chapter, appendix, forward, etc.) following the number of that kind of page. If there's no number specific for that kind of page, just use page type.
 
-[Translations]: https://github.com/rust-lang/book/issues?q=is%3Aopen+is%3Aissue+label%3ATranslations
-[mdbook support]: https://github.com/rust-lang-nursery/mdBook/issues/5
+Example
+- For _ch03-02-data-types.md_ use `ch03-02`
+- For _appendix-04-useful-development-tools.md_ use `appendix-04`
+- For _title-page.md_ use `title-page.md`
+
+#### Subject (optional)
+is a short description of what has been done
+
+Example
+- For _change_ chapter _appendix-01-keywords.md_ use `change::appendix-01`
+- For _translate_ chapter _ch08-02-strings.md_ use `translate::ch08-02`
