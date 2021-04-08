@@ -1,25 +1,8 @@
-# The Rust Programming Language
+# The Rust Programming Language Thai Edition
 
-![Build Status](https://github.com/rust-lang/book/workflows/CI/badge.svg)
+[![Build Status](https://github.com/rust-lang-th/book-th/actions/workflows/main.yml/badge.svg)](https://github.com/rust-lang-th/book-th/actions/workflows/main.yml)
 
-This repository contains the source of "The Rust Programming Language" book.
-
-[The book is available in dead-tree form from No Starch Press][nostarch].
-
-[nostarch]: https://nostarch.com/rust
-
-You can also read the book for free online. Please see the book as shipped with
-the latest [stable], [beta], or [nightly] Rust releases. Be aware that issues
-in those versions may have been fixed in this repository already, as those
-releases are updated less frequently.
-
-[stable]: https://doc.rust-lang.org/stable/book/
-[beta]: https://doc.rust-lang.org/beta/book/
-[nightly]: https://doc.rust-lang.org/nightly/book/
-
-See the [releases] to download just the code of all the code listings that appear in the book.
-
-[releases]: https://github.com/rust-lang/book/releases
+This repository contains the source of "The Rust Programming Language" book translate to Thai language.
 
 ## Requirements
 
@@ -71,17 +54,7 @@ $ mdbook test
 We'd love your help! Please see [CONTRIBUTING.md][contrib] to learn about the
 kinds of contributions we're looking for.
 
-[contrib]: https://github.com/rust-lang/book/blob/master/CONTRIBUTING.md
-
-### Translations
-
-We'd love help translating the book! See the [Translations] label to join in
-efforts that are currently in progress. Open a new issue to start working on
-a new language! We're waiting on [mdbook support] for multiple languages
-before we merge any in, but feel free to start!
-
-[Translations]: https://github.com/rust-lang/book/issues?q=is%3Aopen+is%3Aissue+label%3ATranslations
-[mdbook support]: https://github.com/rust-lang-nursery/mdBook/issues/5
+[contrib]: https://github.com/rust-lang-th/book-th/blob/master/CONTRIBUTING.md
 
 ## Spellchecking
 
