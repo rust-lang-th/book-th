@@ -1,7 +1,6 @@
-# Understanding Ownership
+# ทำความเข้าใจเกี่ยวกับ Ownership
 
-Ownership is Rust’s most unique feature, and it enables Rust to make memory
-safety guarantees without needing a garbage collector. Therefore, it’s
-important to understand how ownership works in Rust. In this chapter, we’ll
-talk about ownership as well as several related features: borrowing, slices,
-and how Rust lays data out in memory.
+Ownership เป็นลักษณะเฉพาะตัวที่สุดของ Rust ที่ทำให้ Rust สามาถรับประกัน memory safety ได้โดยที่ไม่ต้องมี
+ตัวจัดการขยะในหน่วยความจำ หรือ garbage collector ดังนั้นมันจึงสำคัญมากที่เราจะต้องเข้าใจว่า ownership ทำงานอย่างไร
+
+ในบทนี้จะพูดถึง ownership และลักษณะอื่นๆที่ใกล้เคียงกันได้แก่ borrowing, slices รวมถึงวิธีที่ Rust จัดการกับข้อมูลในหน่วยความจำ
