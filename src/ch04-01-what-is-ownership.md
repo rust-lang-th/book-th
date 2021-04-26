@@ -1,25 +1,12 @@
-## What Is Ownership?
+## อะไรคือ Ownership?
 
-Rust’s central feature is *ownership*. Although the feature is straightforward
-to explain, it has deep implications for the rest of the language.
+*Ownership* เป็นฟีเจอร์หลักของภาษา Rust ที่สามารถอธิบายได้อย่างตรงไปตรงมาและถูกใช้โดยทั่วไปในการเขียนโปรแกรมภาษา Rust
 
-All programs have to manage the way they use a computer’s memory while running.
-Some languages have garbage collection that constantly looks for no longer used
-memory as the program runs; in other languages, the programmer must explicitly
-allocate and free the memory. Rust uses a third approach: memory is managed
-through a system of ownership with a set of rules that the compiler checks at
-compile time. None of the ownership features slow down your program while it’s
-running.
+ทุกๆโปรแกรมจำเป็นต้องมีวิธีการจัดการหน่วยความจำของคอมพิวเตอร์ขณะที่มันทำงานอยู่ บางภาษาอาจจะมี garbage collection ที่คอยสอดส่องว่ามีหน่วยความจำใดๆไม่ถูกโปรแกรมใช้งานแล้วบ้าง ขณะที่บางภาษา โปรแกรมเมอร์ต้องเป็นคนเขียนคำสั่งให้โปรแกรมจัดการและลบหน่วยความจำที่ไม่ได้ใช้ด้วยตัวเอง Rust ใช้วิธีที่สามคือ: หน่วยความจำของระบบถูกจัดการภายใต้แนวคิด ownership ด้วยกฎที่ compiler เป็นคนตรวจสอบขณะ compile (compile time) เพราะเหตุนี้ ownership ฟีเจอร์จะไม่ทำให้โปรแกรมช้าลงเลย (เพราะว่าฟีเจอร์ ownership ทำงานในขณะ compile time ไม่ใช่ที่ runtime - ผู้แปล)
 
-Because ownership is a new concept for many programmers, it does take some time
-to get used to. The good news is that the more experienced you become with Rust
-and the rules of the ownership system, the more you’ll be able to naturally
-develop code that is safe and efficient. Keep at it!
+ด้วยความที่ ownership เป็นฟีเจอร์เฉพาะตัวของ Rust โปรแกรมเมอร์ซึ่งไม่คุ้นเคยกับแนวคิดนี้อาจจะต้องใช้เวลาในการทำความเข้าใจและฝึกหัดเพื่อทำความคุ้นเคยกับมัน ข่าวดีคือยิ่งคุณมีประสบการณ์ในการเขียนโปรแกรมภาษา Rust ด้วยแนวคิด ownership มากเท่าไหร่ คุณจะยิ่งสร้างโปรแกรมที่ปลอดภัยและมีประสิทธิภาพมากขึ้นเท่านั้น!
 
-When you understand ownership, you’ll have a solid foundation for understanding
-the features that make Rust unique. In this chapter, you’ll learn ownership by
-working through some examples that focus on a very common data structure:
-strings.
+เมื่อคุณเข้าใจเรื่อง ownership มันจะทำให้คุณมีความรู้รากฐานที่ทำให้คุณเข้าใจว่าทำไมภาษา Rust ถึงมีความแตกต่างจากภาษาโปรแกรมอื่นๆ ในบทนี้คุณจะเรียนรู้แนวคิด ownership ผ่านตัวอย่างจาก data structure ซึ่งเป็นที่รู้จักโดยทั่วไป: strings
 
 > ### The Stack and the Heap
 >
