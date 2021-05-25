@@ -1,17 +1,16 @@
-## Appendix A: Keywords
+## ภาคผนวก A: คีย์เวิร์ด
 
-The following list contains keywords that are reserved for current or future
-use by the Rust language. As such, they cannot be used as identifiers (except
-as raw identifiers as we’ll discuss in the “[Raw
-Identifiers][raw-identifiers]<!-- ignore -->” section), including names of
-functions, variables, parameters, struct fields, modules, crates, constants,
-macros, static values, attributes, types, traits, or lifetimes.
+รายชื่อต่อไปนี้ประกอบด้วยคีย์เวิร์ดที่สงวนเอาไว้สำหรับการใช้งานในปัจจุบันและอนาคตด้วยภาษา Rust
+ด้วยเหตุนี้จึงไม่สามารถใช้เป็น identifiers ได้ (ยกเว้นใช้เป็น
+Identifiers][raw-identifiers]<!-- ignore -->” ), รวมถึงชื่อของ
+ฟังก์ชัน, ตัวแปร, พารามิเตอร์, struct fields, โมดูล, crates, ค่าคงที่,
+macro, static values, attributes, types, traits, หรือ lifetimes.
 
 [raw-identifiers]: #raw-identifiers
 
-### Keywords Currently in Use
+### คีย์เวิร์ดที่ใช้อยู่ในปัจจุบัน 
 
-The following keywords currently have the functionality described.
+คีย์เวิร์ดเหล่านี้ในปัจจุบันมีการทำงานดังนี้
 
 * `as` - perform primitive casting, disambiguate the specific trait containing
   an item, or rename items in `use` and `extern crate` statements
@@ -58,10 +57,9 @@ The following keywords currently have the functionality described.
 
 [union]: ../reference/items/unions.html
 
-### Keywords Reserved for Future Use
+### คีย์เวิร์ดที่สงวนไว้สำหรับการใช้งานในอนาคต
 
-The following keywords do not have any functionality but are reserved by Rust
-for potential future use.
+คีย์เวิร์ดต่อไปนี้ไม่มีการทำงานใดๆ แต่ Rust สงวนไว้สำหรับการใช้งานในอนาคต 
 
 * `abstract`
 * `become`
@@ -79,13 +77,13 @@ for potential future use.
 
 ### Raw Identifiers
 
-*Raw identifiers* are the syntax that lets you use keywords where they wouldn’t
-normally be allowed. You use a raw identifier by prefixing a keyword with `r#`.
+*Raw identifiers* คือ syntax ที่ให้คุณใช้คีย์เวิร์ดในที่ที่ปกติจะไม่ได้รับอนุญาต
+คุณสามารถใช้ raw identifier โดยการใส่ `r#` ไว้ข้างหน้าคีย์เวิร์ด
 
-For example, `match` is a keyword. If you try to compile the following function
-that uses `match` as its name:
+ตัวอย่างเช่น `match` เป็นคีย์เวิร์ด ถ้าคุณฦลองคอมไพล์ฟังก์ชันเหล่านี้
+ซึ่งใช้ `match` เป็นชื่อของฟังก์ชัน:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">ชื่อไฟล์: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 fn match(needle: &str, haystack: &str) -> bool {
@@ -93,7 +91,7 @@ fn match(needle: &str, haystack: &str) -> bool {
 }
 ```
 
-you’ll get this error:
+คุณจะได้รับข้อผิดพลาดนี้:
 
 ```text
 error: expected identifier, found keyword `match`
@@ -103,11 +101,11 @@ error: expected identifier, found keyword `match`
   |    ^^^^^ expected identifier, found keyword
 ```
 
-The error shows that you can’t use the keyword `match` as the function
-identifier. To use `match` as a function name, you need to use the raw
-identifier syntax, like this:
+ข้อผิดพลาดนี้แสดงให้เห็นว่าคุณไม่สามารถใช้คียเวิร์ด `match` as the function
+identifier. เพื่อจะใช้ `match` เป็นชื่อของฟังก์ชัน, คุณจำเป็นจะต้องใช้ raw
+identifier syntax แบบนี้:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">ชื่อไฟล์: src/main.rs</span>
 
 ```rust
 fn r#match(needle: &str, haystack: &str) -> bool {
@@ -119,16 +117,16 @@ fn main() {
 }
 ```
 
-This code will compile without any errors. Note the `r#` prefix on the function
-name in its definition as well as where the function is called in `main`.
+โค้ดนี้จะคอมไพล์โดยไม่มีข้อผิดพลาด, โปรดสังเกตุว่าคำนำหน้า `r#` อยู่ในชื่อของฟังก์ชันในขณะที่สร้าง
+และเมื่อเรียกใช้ใน `main`.
 
-Raw identifiers allow you to use any word you choose as an identifier, even if
-that word happens to be a reserved keyword. In addition, raw identifiers allow
-you to use libraries written in a different Rust edition than your crate uses.
-For example, `try` isn’t a keyword in the 2015 edition but is in the 2018
-edition. If you depend on a library that’s written using the 2015 edition and
-has a `try` function, you’ll need to use the raw identifier syntax, `r#try` in
-this case, to call that function from your 2018 edition code. See [Appendix
-E][appendix-e]<!-- ignore --> for more information on editions.
+Raw identifiers อนุญาตให้คุณใช้คำไหนก็ได้เป็น identifier
+แม้ว่าคำนั้นจะเป็นคีย์เวิร์ดที่สงวนไว้ก็ตาม นอจากนี้ raw identifiers
+อนุญาตให้คุณเรียกใช้ไลบรารีที่เขียนในรุ่นที่แตกต่างจากรุ่น Rust ที่ใช้อยู่
+ตัวอย่างเช่น `try` ไม่ใช่คีย์เวิร์ดในรุ่นปี 2015 แต่เป็นคีย์เวิร์ดในรุ่นปี 2018
+และถ้าคุณต้องการใช้ไลบรารีที่เขียนโดยใช้รุ่นของปี 2015
+และมีฟังก์ชัน `try` คุณจำเป็นจะต้องใช้ raw identifier syntax `r#try` in
+ในกรณี่ที่เรียกฟังก์ชันจากโค้ดในรุ่นปี 2018 ดูที่ [ภาคผนวก
+E][appendix-e]<!-- ignore --> สำหรับข้อมูลเพิ่มเติมเกี่ยวกับรุ่นต่างๆ
 
 [appendix-e]: appendix-05-editions.html
