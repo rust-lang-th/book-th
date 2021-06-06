@@ -2,9 +2,10 @@
 
 รายชื่อต่อไปนี้ประกอบด้วยคีย์เวิร์ดที่สงวนเอาไว้สำหรับการใช้งานในปัจจุบันและอนาคตด้วยภาษา Rust
 ด้วยเหตุนี้จึงไม่สามารถใช้เป็น identifiers ได้ (ยกเว้นใช้เป็น
+raw identifiers ซึ่งเราจะพูดถึงในส่วน “[Raw
 Identifiers][raw-identifiers]<!-- ignore -->” ), รวมถึงชื่อของ
 ฟังก์ชัน, ตัวแปร, พารามิเตอร์, struct fields, โมดูล, crates, ค่าคงที่,
-macro, static values, attributes, types, traits, หรือ lifetimes.
+มาโคร, static values, attributes, types, traits, หรือ lifetimes.
 
 [raw-identifiers]: #raw-identifiers
 
@@ -12,48 +13,50 @@ macro, static values, attributes, types, traits, หรือ lifetimes.
 
 คีย์เวิร์ดเหล่านี้ในปัจจุบันมีการทำงานดังนี้
 
-* `as` - perform primitive casting, disambiguate the specific trait containing
-  an item, or rename items in `use` and `extern crate` statements
-* `async` -  return a `Future` instead of blocking the current thread
-* `await` - suspend execution until the result of a `Future` is ready
-* `break` - exit a loop immediately
-* `const` - define constant items or constant raw pointers
-* `continue` - continue to the next loop iteration
-* `crate` - link an external crate or a macro variable representing the crate in
-  which the macro is defined
-* `dyn` - dynamic dispatch to a trait object
-* `else` - fallback for `if` and `if let` control flow constructs
-* `enum` - define an enumeration
-* `extern` - link an external crate, function, or variable
-* `false` - Boolean false literal
-* `fn` - define a function or the function pointer type
-* `for` - loop over items from an iterator, implement a trait, or specify a
+
+* `as` - ดำเนินการแปลง primitive, ลดความกำกวมของ trait ที่มีไอเทมอยู่
+  , หรือเปลี่ยนชื่อไอเทมใน `use` และ `extern crate`
+* `async` -  คืนค่า `Future` แทนที่จะบล็อกเธรด (Thread) ปัจจุบัน
+* `await` - หยุดการทำงานจนกว่าผลของ `Future` จะพร้อม
+* `break` - ออกจากการวนรอบทันที
+* `const` - กำหนด constant items หรือ constant raw pointers
+* `continue` - ไปยังการวนรอบถัดไป
+* `crate` - ลิงค์ไปยัง crate ภายนอกหรือตัวแปรมาโครที่แทน crate
+  ที่มาโครถูกกำหนด
+* `dyn` - dynamic dispatch ไปยังออบเจกต์ trait
+* `else` - ส่วนต่อท้ายสำหรับโครงสร้างเงื่อนไข `if` และ `if let`
+* `enum` - กำหนด enumeration
+* `extern` - ลิงค์ไปยัง crate ภายนอก, ฟังก์ชัน, หรือตัวแปร
+* `false` - บูลีนค่าเท็จ
+* `fn` - กำหนดฟังก์ชัน (function) หรือ function pointer type
+* `for` - วนซ้ำไอเทมจาก iterator, implement trait, หรือระบุ
   higher-ranked lifetime
-* `if` - branch based on the result of a conditional expression
-* `impl` - implement inherent or trait functionality
-* `in` - part of `for` loop syntax
-* `let` - bind a variable
-* `loop` - loop unconditionally
-* `match` - match a value to patterns
-* `mod` - define a module
-* `move` - make a closure take ownership of all its captures
-* `mut` - denote mutability in references, raw pointers, or pattern bindings
-* `pub` - denote public visibility in struct fields, `impl` blocks, or modules
-* `ref` - bind by reference
-* `return` - return from function
-* `Self` - a type alias for the type we are defining or implementing
-* `self` - method subject or current module
-* `static` - global variable or lifetime lasting the entire program execution
-* `struct` - define a structure
-* `super` - parent module of the current module
-* `trait` - define a trait
-* `true` - Boolean true literal
-* `type` - define a type alias or associated type
-* `union` - define a [union] and is only a keyword when used in a union declaration
-* `unsafe` - denote unsafe code, functions, traits, or implementations
-* `use` - bring symbols into scope
+* `if` - เงื่อนไขการทำงานขึ้นอยู่กับผลของ expression
+* `impl` - ใช้ฟังก์ชันของตัวเองหรือฟังก์ชันจาก trait
+* `in` - ส่วนหนึ่งของการกำหนดการวนรอบ `for`
+* `let` - ผูกตัวแปร
+* `loop` - วนรอบอย่างไม่มีเงื่อนไข
+* `match` - จับคู่ค่ากับรูปแบบ
+* `mod` - กำหนดโมดูล (module)
+* `move` - ทำให้ closure รับความเป็นเจ้าของ (ownership) ของ captures ทั้งหมด
+* `mut` - ใช้แสดงถึงความสามารถในการการแก้ไขได้ (mutability) ใน references, raw pointers, หรือ pattern bindings
+* `pub` - ใช้แสดงการมองเห็นในระดับ public ใน fields ของ struct ,บล็อกของ `impl`, หรือโมดูล
+* `ref` - ผูกโดยตัวอ้างอิง (reference)
+* `return` - คืนค่าจากฟังก์ชัน
+* `Self` - type alias สำหรับ type ที่เรากำหนดไว้หรือ implementing
+* `self` - method subject หรือโมดูลปัจจุบัน
+* `static` - global variable หรือมี lifetime อยู่จนโปรแกรมทำงานเสร็จสิ้น
+* `struct` - กำหนดสตรักเจอร์ (structure)
+* `super` - parent module ของโมดูลปัจจุบัน
+* `trait` - กำหนด trait
+* `true` - บูลีนค่าจริง
+* `type` - กำหนด type alias หรือ associated type
+* `union` - กำหนด [union] และเป็นเพียงคีย์เวิร์ดที่นำมาใช้ในการประกาศ union เท่านั้น
+* `unsafe` - ใช้แสดงส่วน unsafe code, ฟังก์ชัน, traits, หรือ implementations
+* `use` - นำสัญลักษณ์มาสู่ขอบเขต (scope)
 * `where` - denote clauses that constrain a type
-* `while` - loop conditionally based on the result of an expression
+* `while` - วนรอบอย่างมีเงื่อนไขจากผลลัพธ์ของ expression
+
 
 [union]: ../reference/items/unions.html
 
