@@ -1,67 +1,68 @@
-## Appendix A: Keywords
+## ภาคผนวก A: คีย์เวิร์ด
 
-The following list contains keywords that are reserved for current or future
-use by the Rust language. As such, they cannot be used as identifiers (except
-as raw identifiers as we’ll discuss in the “[Raw
-Identifiers][raw-identifiers]<!-- ignore -->” section), including names of
+รายชื่อต่อไปนี้ประกอบด้วยคีย์เวิร์ดที่สงวนเอาไว้สำหรับการใช้งานในปัจจุบันและอนาคตด้วยภาษา Rust
+ด้วยเหตุนี้จึงไม่สามารถใช้เป็น identifiers ได้ (ยกเว้นใช้เป็น
+raw identifiers ซึ่งเราจะพูดถึงในส่วน “[Raw
+Identifiers][raw-identifiers]<!-- ignore -->” ), รวมถึงชื่อของ
 functions, variables, parameters, struct fields, modules, crates, constants,
-macros, static values, attributes, types, traits, or lifetimes.
+macros, static values, attributes, types, traits, หรือ lifetimes.
 
 [raw-identifiers]: #raw-identifiers
 
-### Keywords Currently in Use
+### คีย์เวิร์ดที่ใช้อยู่ในปัจจุบัน 
 
-The following keywords currently have the functionality described.
+คีย์เวิร์ดเหล่านี้ในปัจจุบันมีการทำงานดังนี้
 
-* `as` - perform primitive casting, disambiguate the specific trait containing
-  an item, or rename items in `use` and `extern crate` statements
-* `async` -  return a `Future` instead of blocking the current thread
-* `await` - suspend execution until the result of a `Future` is ready
-* `break` - exit a loop immediately
-* `const` - define constant items or constant raw pointers
-* `continue` - continue to the next loop iteration
-* `crate` - link an external crate or a macro variable representing the crate in
-  which the macro is defined
-* `dyn` - dynamic dispatch to a trait object
-* `else` - fallback for `if` and `if let` control flow constructs
-* `enum` - define an enumeration
-* `extern` - link an external crate, function, or variable
-* `false` - Boolean false literal
-* `fn` - define a function or the function pointer type
-* `for` - loop over items from an iterator, implement a trait, or specify a
+
+* `as` - ดำเนินการแปลง primitive, ลดความกำกวมของ trait ที่มีไอเทมอยู่
+  , หรือเปลี่ยนชื่อไอเทมใน `use` และ `extern crate`
+* `async` -  คืนค่า `Future` แทนที่จะบล็อก Thread ปัจจุบัน
+* `await` - หยุดการทำงานจนกว่าผลของ `Future` จะพร้อม
+* `break` - ออกจากการวนรอบทันที
+* `const` - กำหนด constant items หรือ constant raw pointers
+* `continue` - ไปยังการวนรอบถัดไป
+* `crate` - ลิงค์ไปยัง crate ภายนอกหรือตัวแปรมาโครที่แทน crate
+  ที่มาโครถูกกำหนด
+* `dyn` - dynamic dispatch ไปยังออบเจกต์ trait
+* `else` - ส่วนต่อท้ายสำหรับโครงสร้างเงื่อนไข `if` และ `if let`
+* `enum` - กำหนด enumeration
+* `extern` - ลิงค์ไปยัง crate ภายนอก, ฟังก์ชัน, หรือตัวแปร
+* `false` - บูลีนค่าเท็จ
+* `fn` - กำหนดฟังก์ชัน (function) หรือ function pointer type
+* `for` - วนซ้ำไอเทมจาก iterator, implement trait, หรือระบุ
   higher-ranked lifetime
-* `if` - branch based on the result of a conditional expression
-* `impl` - implement inherent or trait functionality
-* `in` - part of `for` loop syntax
-* `let` - bind a variable
-* `loop` - loop unconditionally
-* `match` - match a value to patterns
-* `mod` - define a module
-* `move` - make a closure take ownership of all its captures
-* `mut` - denote mutability in references, raw pointers, or pattern bindings
-* `pub` - denote public visibility in struct fields, `impl` blocks, or modules
-* `ref` - bind by reference
-* `return` - return from function
-* `Self` - a type alias for the type we are defining or implementing
-* `self` - method subject or current module
-* `static` - global variable or lifetime lasting the entire program execution
-* `struct` - define a structure
-* `super` - parent module of the current module
-* `trait` - define a trait
-* `true` - Boolean true literal
-* `type` - define a type alias or associated type
-* `union` - define a [union] and is only a keyword when used in a union declaration
-* `unsafe` - denote unsafe code, functions, traits, or implementations
-* `use` - bring symbols into scope
-* `where` - denote clauses that constrain a type
-* `while` - loop conditionally based on the result of an expression
+* `if` - เงื่อนไขการทำงานขึ้นอยู่กับผลของ expression
+* `impl` - ใช้ฟังก์ชันของตัวเองหรือฟังก์ชันจาก trait
+* `in` - ส่วนหนึ่งของการกำหนดการวนรอบ `for`
+* `let` - ผูกตัวแปร
+* `loop` - วนรอบอย่างไม่มีเงื่อนไข
+* `match` - จับคู่ค่ากับรูปแบบ
+* `mod` - กำหนดโมดูล
+* `move` - ทำให้ closure รับความเป็นเจ้าของของแคปเจอร์ทั้งหมด
+* `mut` - ใช้แสดงถึงความสามารถในการการแก้ไขได้ (mutability) ใน references, raw pointers, หรือ pattern bindings
+* `pub` - ใช้แสดงการมองเห็นในระดับ public ใน fields ของ struct ,บล็อกของ `impl`, หรือโมดูล
+* `ref` - ผูกโดยตัวอ้างอิง (reference)
+* `return` - คืนค่าจากฟังก์ชัน
+* `Self` - type alias สำหรับ type ที่เรากำหนดไว้หรือ implementing
+* `self` - method subject หรือโมดูลปัจจุบัน
+* `static` - global variable หรือมี lifetime อยู่จนโปรแกรมทำงานเสร็จสิ้น
+* `struct` - กำหนดสตรักเจอร์ (structure)
+* `super` - parent module ของโมดูลปัจจุบัน
+* `trait` - กำหนด trait
+* `true` - บูลีนค่าจริง
+* `type` - กำหนด type alias หรือ associated type
+* `union` - กำหนด [union] และเป็นเพียงคีย์เวิร์ดที่นำมาใช้ในการประกาศ union เท่านั้น
+* `unsafe` - ใช้แสดงส่วน unsafe code, ฟังก์ชัน, traits, หรือ implementations
+* `use` - นำสัญลักษณ์มาสู่ขอบเขต (scope)
+* `where` - ใช้แสดงถึงเงื่อนไขที่ใช้ในการจำกัด type
+* `while` - วนรอบอย่างมีเงื่อนไขจากผลลัพธ์ของ expression
+
 
 [union]: ../reference/items/unions.html
 
-### Keywords Reserved for Future Use
+### คำสงวนที่สงวนไว้สำหรับการใช้งานในอนาคต
 
-The following keywords do not have any functionality but are reserved by Rust
-for potential future use.
+คำสงวนต่อไปนี้ไม่มีการทำงานใดๆ แต่ Rust สงวนไว้สำหรับการใช้งานในอนาคต 
 
 * `abstract`
 * `become`
@@ -79,13 +80,13 @@ for potential future use.
 
 ### Raw Identifiers
 
-*Raw identifiers* are the syntax that lets you use keywords where they wouldn’t
-normally be allowed. You use a raw identifier by prefixing a keyword with `r#`.
+*Raw identifiers* คือ syntax ที่ให้คุณใช้คีย์เวิร์ดในที่ที่ปกติจะไม่ได้รับอนุญาต
+คุณสามารถใช้ raw identifier โดยการใส่ `r#` ไว้ข้างหน้าคีย์เวิร์ด
 
-For example, `match` is a keyword. If you try to compile the following function
-that uses `match` as its name:
+ตัวอย่างเช่น `match` เป็นคีย์เวิร์ด ถ้าคุณลองคอมไพล์ฟังก์ชันเหล่านี้
+ซึ่งใช้ `match` เป็นชื่อของฟังก์ชัน:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">ชื่อไฟล์: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 fn match(needle: &str, haystack: &str) -> bool {
@@ -93,7 +94,7 @@ fn match(needle: &str, haystack: &str) -> bool {
 }
 ```
 
-you’ll get this error:
+คุณจะได้รับ error:
 
 ```text
 error: expected identifier, found keyword `match`
@@ -103,11 +104,11 @@ error: expected identifier, found keyword `match`
   |    ^^^^^ expected identifier, found keyword
 ```
 
-The error shows that you can’t use the keyword `match` as the function
-identifier. To use `match` as a function name, you need to use the raw
-identifier syntax, like this:
+ข้อผิดพลาดนี้แสดงให้เห็นว่าคุณไม่สามารถใช้คียเวิร์ด `match` as the function
+identifier. เพื่อจะใช้ `match` เป็นชื่อของฟังก์ชัน, คุณจำเป็นจะต้องใช้ raw
+identifier syntax แบบนี้:
 
-<span class="filename">Filename: src/main.rs</span>
+<span class="filename">ชื่อไฟล์: src/main.rs</span>
 
 ```rust
 fn r#match(needle: &str, haystack: &str) -> bool {
@@ -119,16 +120,16 @@ fn main() {
 }
 ```
 
-This code will compile without any errors. Note the `r#` prefix on the function
-name in its definition as well as where the function is called in `main`.
+โค้ดนี้จะคอมไพล์โดยไม่มีข้อผิดพลาด, โปรดสังเกตุว่าคำนำหน้า `r#` อยู่ในชื่อของฟังก์ชันในขณะที่สร้าง
+และเมื่อเรียกใช้ใน `main`.
 
-Raw identifiers allow you to use any word you choose as an identifier, even if
-that word happens to be a reserved keyword. In addition, raw identifiers allow
-you to use libraries written in a different Rust edition than your crate uses.
-For example, `try` isn’t a keyword in the 2015 edition but is in the 2018
-edition. If you depend on a library that’s written using the 2015 edition and
-has a `try` function, you’ll need to use the raw identifier syntax, `r#try` in
-this case, to call that function from your 2018 edition code. See [Appendix
-E][appendix-e]<!-- ignore --> for more information on editions.
+Raw identifiers อนุญาตให้คุณใช้คำไหนก็ได้เป็น identifier
+แม้ว่าคำนั้นจะเป็นคำสงวนที่สงวนไว้ก็ตาม นอกจากนี้ raw identifiers
+อนุญาตให้คุณเรียกใช้ไลบรารีที่เขียนในรุ่นที่แตกต่างจากรุ่น Rust ที่ใช้อยู่
+ตัวอย่างเช่น `try` ไม่ใช่คีย์เวิร์ดในรุ่นปี 2015 แต่เป็นคีย์เวิร์ดในรุ่นปี 2018
+และถ้าคุณต้องการใช้ไลบรารีที่เขียนโดยใช้รุ่นของปี 2015
+และมีฟังก์ชัน `try` คุณจำเป็นจะต้องใช้ raw identifier syntax `r#try`
+ในกรณี่ที่เรียกฟังก์ชันจากโค้ดในรุ่นปี 2018 ดูที่ [ภาคผนวก
+E][appendix-e]<!-- ignore --> สำหรับข้อมูลเพิ่มเติมเกี่ยวกับรุ่นต่างๆ
 
 [appendix-e]: appendix-05-editions.html
