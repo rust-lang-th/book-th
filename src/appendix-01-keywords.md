@@ -37,8 +37,8 @@ macros, static values, attributes, types, traits, หรือ lifetimes.
 * `let` - ผูกตัวแปร
 * `loop` - วนรอบอย่างไม่มีเงื่อนไข
 * `match` - จับคู่ค่ากับรูปแบบ
-* `mod` - กำหนดโมดูล (module)
-* `move` - ทำให้ closure รับความเป็นเจ้าของ (ownership) ของแคปเจอร์ทั้งหมด
+* `mod` - กำหนดโมดูล
+* `move` - ทำให้ closure รับความเป็นเจ้าของของแคปเจอร์ทั้งหมด
 * `mut` - ใช้แสดงถึงความสามารถในการการแก้ไขได้ (mutability) ใน references, raw pointers, หรือ pattern bindings
 * `pub` - ใช้แสดงการมองเห็นในระดับ public ใน fields ของ struct ,บล็อกของ `impl`, หรือโมดูล
 * `ref` - ผูกโดยตัวอ้างอิง (reference)
@@ -54,7 +54,7 @@ macros, static values, attributes, types, traits, หรือ lifetimes.
 * `union` - กำหนด [union] และเป็นเพียงคีย์เวิร์ดที่นำมาใช้ในการประกาศ union เท่านั้น
 * `unsafe` - ใช้แสดงส่วน unsafe code, ฟังก์ชัน, traits, หรือ implementations
 * `use` - นำสัญลักษณ์มาสู่ขอบเขต (scope)
-* `where` - denote clauses that constrain a type
+* `where` - ใช้แสดงถึงเงื่อนไขที่ใช้ในการจำกัด type
 * `while` - วนรอบอย่างมีเงื่อนไขจากผลลัพธ์ของ expression
 
 
